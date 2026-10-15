@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Todo App</h1>
+        <p>Users and todos stored in PostgreSQL</p>
+      </header>
+
+      <section class="card">
+        <h2>User</h2>
+        <form id="user-form" class="row">
+          <input id="username" name="username" placeholder="Username" required maxlength="100" />
+          <input id="email" name="email" type="email" placeholder="Email" required maxlength="150" />
+          <button type="submit">Add user</button>
+        </form>
+        <label class="select-label">
+          Current user
+          <select id="user-select"></select>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>New todo</h2>
+        <form id="todo-form">
+          <input id="title" name="title" placeholder="Title" required maxlength="255" />
+          <textarea id="description" name="description" placeholder="Description (optional)" rows="3"></textarea>
+          <button type="submit">Add todo</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Todos</h2>
+        <p id="empty" class="empty hidden">No todos yet.</p>
+        <ul id="todo-list"></ul>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
